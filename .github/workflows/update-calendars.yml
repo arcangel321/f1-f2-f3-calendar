@@ -1,0 +1,230 @@
+import re
+import urllib.request
+from datetime import datetime
+
+SOURCES = {
+    "f1": "https://ics.ecal.com/ecal-sub/6aa50ef6bc1c410003d96fbf/Formula%201.ics",
+    "f2": "https://ics.ecal.com/ecal-sub/6aa50eb99c648e00038ee83c/Formula%202.ics",
+    "f3": "https://ics.ecal.com/ecal-sub/6aa50e5abc1c410003d96fb1/Formula%203.ics",
+}
+
+
+def download(url):
+    request = urllib.request.Request(
+        url,
+        headers={"User-Agent": "Mozilla/5.0"}
+    )
+
+    with urllib.request.urlopen(request, timeout=60) as response:
+        return response.read().decode("utf-8")
+
+
+def get_property(event, property_name):
+    pattern = rf"(?im)^{re.escape(property_name)}(?:;[^:]*)?:(.*)$"
+    match = re.search(pattern, event)
+
+    if match:
+        return match.group(1).strip()
+
+    return ""
+
+
+def get_start_datetime(event):
+    match = re.search(
+        r"(?im)^DTSTART(?:;[^:]*)?:(\d{8})(?:T(\d{6}))?",
+        event
+    )
+
+    if not match:
+        return datetime.max
+
+    date_part = match.group(1)
+    time_part = match.group(2) or "000000"
+
+    try:
+        return datetime.strptime(
+            date_part + time_part,
+            "%Y%m%d%H%M%S"
+        )
+    except ValueError:
+        return datetime.max
+
+
+def replace_summary(event, title):
+    return re.sub(
+        r"(?im)^SUMMARY(?:;[^:]*)?:.*(?:\r?\n[ \t].*)*",
+        "SUMMARY:" + title,
+        event,
+        count=1
+    )
+
+
+def f1_title(summary):
+    s = summary.upper()
+
+    if "SPRINT QUALIFYING" in s:
+        return "F1 Sprint Kwalificatie"
+
+    if "PRACTICE 1" in s or "FREE PRACTICE 1" in s or "FP1" in s:
+        return "F1 VT1"
+
+    if "PRACTICE 2" in s or "FREE PRACTICE 2" in s or "FP2" in s:
+        return "F1 VT2"
+
+    if "PRACTICE 3" in s or "FREE PRACTICE 3" in s or "FP3" in s:
+        return "F1 VT3"
+
+    if "QUALIFYING" in s:
+        return "F1 Kwalificatie"
+
+    if "SPRINT" in s:
+        return "F1 Sprint"
+
+    if "RACE" in s or "GRAND PRIX" in s:
+        return "F1 Race"
+
+    return None
+
+
+def f2_title(summary):
+    s = summary.upper()
+
+    if "PRACTICE" in s or "FREE PRACTICE" in s:
+        return "F2 Practice"
+
+    if "QUALIFYING" in s:
+        return "F2 Kwalificatie"
+
+    if "SPRINT" in s:
+        return "F2 Sprint"
+
+    if "FEATURE" in s:
+        return "F2 Feature Race"
+
+    return None
+
+
+def f3_title(summary):
+    s = summary.upper()
+
+    if "PRACTICE" in s or "FREE PRACTICE" in s:
+        return "F3 Practice"
+
+    if "QUALIFYING 1" in s or re.search(r"\bQ1\b", s):
+        return "F3 Q1"
+
+    if "QUALIFYING 2" in s or re.search(r"\bQ2\b", s):
+        return "F3 Q2"
+
+    if "SPRINT" in s:
+        return "F3 Sprint"
+
+    if "FEATURE" in s:
+        return "F3 Feature Race"
+
+    if "QUALIFYING" in s:
+        return "F3 Kwalificatie"
+
+    return None
+
+
+def process(series, text):
+    # Normalise line endings
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+
+    # Split events
+    events = re.findall(
+        r"BEGIN:VEVENT.*?END:VEVENT",
+        text,
+        flags=re.S
+    )
+
+    parsed_events = []
+
+    for event in events:
+        summary = get_property(event, "SUMMARY")
+        start = get_start_datetime(event)
+
+        parsed_events.append({
+            "event": event,
+            "summary": summary,
+            "start": start
+        })
+
+    # F3: Feature Races per race weekend nummeren
+    f3_feature_number = {}
+
+    if series == "f3":
+        feature_events = [
+            item for item in parsed_events
+            if "FEATURE" in item["summary"].upper()
+        ]
+
+        # Per ISO-weekend groeperen
+        weekends = {}
+
+        for item in feature_events:
+            iso = item["start"].isocalendar()
+            key = (iso.year, iso.week)
+
+            weekends.setdefault(key, []).append(item)
+
+        for weekend, items in weekends.items():
+            items.sort(key=lambda x: x["start"])
+
+            for number, item in enumerate(items, start=1):
+                f3_feature_number[id(item)] = number
+
+    # Events vervangen
+    for item in parsed_events:
+        summary = item["summary"]
+
+        if series == "f1":
+            title = f1_title(summary)
+
+        elif series == "f2":
+            title = f2_title(summary)
+
+        else:
+            title = f3_title(summary)
+
+            if title == "F3 Feature Race":
+                number = f3_feature_number.get(id(item), 1)
+
+                if number == 1:
+                    title = "F3 Feature 1"
+                else:
+                    title = "F3 Feature 2"
+
+        if title:
+            new_event = replace_summary(item["event"], title)
+            text = text.replace(item["event"], new_event, 1)
+
+    # RFC5545 gebruikt CRLF
+    return text.replace("\n", "\r\n")
+
+
+for series, url in SOURCES.items():
+
+    print(f"Downloading {series} calendar...")
+
+    try:
+        source = download(url)
+
+        output = process(series, source)
+
+        filename = f"{series}.ics"
+
+        with open(
+            filename,
+            "w",
+            encoding="utf-8",
+            newline=""
+        ) as file:
+            file.write(output)
+
+        print(f"Created {filename}")
+
+    except Exception as error:
+        print(f"ERROR processing {series}: {error}")
+        raise
