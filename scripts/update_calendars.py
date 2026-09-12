@@ -2,6 +2,7 @@ import re
 import urllib.request
 from datetime import datetime
 
+
 SOURCES = {
     "f1": "https://ics.ecal.com/ecal-sub/6aa50ef6bc1c410003d96fbf/Formula%201.ics",
     "f2": "https://ics.ecal.com/ecal-sub/6aa50eb99c648e00038ee83c/Formula%202.ics",
@@ -9,30 +10,57 @@ SOURCES = {
 }
 
 
-def download(url):
+def download_calendar(url):
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "Mozilla/5.0"}
+        headers={
+            "User-Agent": "Mozilla/5.0"
+        }
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
+
+    with urllib.request.urlopen(request, timeout=60) as response:
         return response.read().decode("utf-8")
 
 
-def unfold(text):
-    return re.sub(r"\r?\n[ \t]", "", text)
+def get_property(event, property_name):
+    pattern = rf"(?im)^{re.escape(property_name)}(?:;[^:]*)?:(.*)$"
+    match = re.search(pattern, event)
+
+    if match:
+        return match.group(1).strip()
+
+    return ""
 
 
-def get_summary(event):
+def get_start_datetime(event):
     match = re.search(
-        r"(?im)^SUMMARY(?:;[^:]*)?:(.*)$",
+        r"(?im)^DTSTART(?:;[^:]*)?:(\d{8})(?:T(\d{6}))?",
         event
     )
-    return match.group(1).strip() if match else ""
+
+    if not match:
+        return datetime.max
+
+    date_part = match.group(1)
+    time_part = match.group(2) or "000000"
+
+    try:
+        return datetime.strptime(
+            date_part + time_part,
+            "%Y%m%d%H%M%S"
+        )
+    except ValueError:
+        return datetime.max
 
 
 def replace_summary(event, title):
+    pattern = (
+        r"(?im)^SUMMARY(?:;[^:]*)?:.*"
+        r"(?:\r?\n[ \t].*)*"
+    )
+
     return re.sub(
-        r"(?im)^SUMMARY(?:;[^:]*)?:.*$",
+        pattern,
         "SUMMARY:" + title,
         event,
         count=1
@@ -40,99 +68,244 @@ def replace_summary(event, title):
 
 
 def f1_title(summary):
-    s = summary.upper()
+    text = summary.upper()
 
-    if "SPRINT QUALIFYING" in s:
+    if "SPRINT QUALIFYING" in text:
         return "F1 Sprint Kwalificatie"
-    if "QUALIFYING" in s:
-        return "F1 Kwalificatie"
-    if "PRACTICE 1" in s or "FREE PRACTICE 1" in s or "FP1" in s:
+
+    if "PRACTICE 1" in text:
         return "F1 VT1"
-    if "PRACTICE 2" in s or "FREE PRACTICE 2" in s or "FP2" in s:
+
+    if "FREE PRACTICE 1" in text:
+        return "F1 VT1"
+
+    if "FP1" in text:
+        return "F1 VT1"
+
+    if "PRACTICE 2" in text:
         return "F1 VT2"
-    if "PRACTICE 3" in s or "FREE PRACTICE 3" in s or "FP3" in s:
+
+    if "FREE PRACTICE 2" in text:
+        return "F1 VT2"
+
+    if "FP2" in text:
+        return "F1 VT2"
+
+    if "PRACTICE 3" in text:
         return "F1 VT3"
-    if "SPRINT" in s:
+
+    if "FREE PRACTICE 3" in text:
+        return "F1 VT3"
+
+    if "FP3" in text:
+        return "F1 VT3"
+
+    if "QUALIFYING" in text:
+        return "F1 Kwalificatie"
+
+    if "SPRINT" in text:
         return "F1 Sprint"
-    if "RACE" in s or "GRAND PRIX" in s:
+
+    if "RACE" in text:
+        return "F1 Race"
+
+    if "GRAND PRIX" in text:
         return "F1 Race"
 
     return None
 
 
 def f2_title(summary):
-    s = summary.upper()
+    text = summary.upper()
 
-    if "QUALIFYING" in s:
-        return "F2 Kwalificatie"
-    if "SPRINT" in s:
-        return "F2 Sprint"
-    if "FEATURE" in s:
-        return "F2 Feature Race"
-    if "PRACTICE" in s or "FREE PRACTICE" in s:
+    if "PRACTICE" in text:
         return "F2 Practice"
+
+    if "FREE PRACTICE" in text:
+        return "F2 Practice"
+
+    if "QUALIFYING" in text:
+        return "F2 Kwalificatie"
+
+    if "SPRINT" in text:
+        return "F2 Sprint"
+
+    if "FEATURE" in text:
+        return "F2 Feature Race"
 
     return None
 
 
 def f3_title(summary):
-    s = summary.upper()
+    text = summary.upper()
 
-    if "QUALIFYING 1" in s or "Q1" in s:
-        return "F3 Q1"
-    if "QUALIFYING 2" in s or "Q2" in s:
-        return "F3 Q2"
-    if "SPRINT" in s:
-        return "F3 Sprint"
-    if "FEATURE" in s:
-        return "F3 Feature Race"
-    if "PRACTICE" in s or "FREE PRACTICE" in s:
+    if "PRACTICE" in text:
         return "F3 Practice"
-    if "QUALIFYING" in s:
+
+    if "FREE PRACTICE" in text:
+        return "F3 Practice"
+
+    if "QUALIFYING 1" in text:
+        return "F3 Q1"
+
+    if "QUALIFYING 2" in text:
+        return "F3 Q2"
+
+    if re.search(r"\bQ1\b", text):
+        return "F3 Q1"
+
+    if re.search(r"\bQ2\b", text):
+        return "F3 Q2"
+
+    if "SPRINT" in text:
+        return "F3 Sprint"
+
+    if "FEATURE" in text:
+        return "F3 Feature Race"
+
+    if "QUALIFYING" in text:
         return "F3 Kwalificatie"
 
     return None
 
 
-def process(series, text):
-    text = unfold(text)
+def get_f3_feature_numbers(events):
+    feature_events = []
+
+    for event in events:
+        summary = get_property(event, "SUMMARY")
+
+        if "FEATURE" in summary.upper():
+            feature_events.append(event)
+
+    weekends = {}
+
+    for event in feature_events:
+        start = get_start_datetime(event)
+
+        if start == datetime.max:
+            continue
+
+        iso = start.isocalendar()
+        weekend_key = (iso.year, iso.week)
+
+        if weekend_key not in weekends:
+            weekends[weekend_key] = []
+
+        weekends[weekend_key].append(event)
+
+    numbers = {}
+
+    for weekend_events in weekends.values():
+        weekend_events.sort(
+            key=get_start_datetime
+        )
+
+        for number, event in enumerate(
+            weekend_events,
+            start=1
+        ):
+            numbers[id(event)] = number
+
+    return numbers
+
+
+def process_calendar(series, source):
+    source = source.replace("\r\n", "\n")
+    source = source.replace("\r", "\n")
 
     events = re.findall(
         r"BEGIN:VEVENT.*?END:VEVENT",
-        text,
+        source,
         flags=re.S
     )
 
-    if series == "f1":
-        mapper = f1_title
-    elif series == "f2":
-        mapper = f2_title
-    else:
-        mapper = f3_title
+    f3_feature_numbers = {}
+
+    if series == "f3":
+        f3_feature_numbers = get_f3_feature_numbers(events)
+
+    output = source
 
     for event in events:
-        summary = get_summary(event)
-        title = mapper(summary)
+        summary = get_property(event, "SUMMARY")
+
+        if series == "f1":
+            title = f1_title(summary)
+
+        elif series == "f2":
+            title = f2_title(summary)
+
+        elif series == "f3":
+            title = f3_title(summary)
+
+            if title == "F3 Feature Race":
+                number = f3_feature_numbers.get(
+                    id(event),
+                    1
+                )
+
+                if number == 1:
+                    title = "F3 Feature 1"
+                else:
+                    title = "F3 Feature 2"
+
+        else:
+            title = None
 
         if title:
-            text = text.replace(
+            new_event = replace_summary(
                 event,
-                replace_summary(event, title),
+                title
+            )
+
+            output = output.replace(
+                event,
+                new_event,
                 1
             )
 
-    return text.replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\r\n")
+    return output.replace(
+        "\n",
+        "\r\n"
+    )
 
 
-for series, url in SOURCES.items():
-    print(f"Downloading {series}...")
-    source = download(url)
+def main():
+    for series, url in SOURCES.items():
 
-    output = process(series, source)
+        print(
+            f"Downloading {series.upper()} calendar..."
+        )
 
-    filename = f"{series}.ics"
+        try:
+            source = download_calendar(url)
 
-    with open(filename, "w", encoding="utf-8", newline="") as file:
-        file.write(output)
+            output = process_calendar(
+                series,
+                source
+            )
 
-    print(f"Created {filename}")
+            filename = f"{series}.ics"
+
+            with open(
+                filename,
+                "w",
+                encoding="utf-8",
+                newline=""
+            ) as file:
+                file.write(output)
+
+            print(
+                f"Successfully created {filename}"
+            )
+
+        except Exception as error:
+            print(
+                f"ERROR processing {series.upper()}: {error}"
+            )
+            raise
+
+
+if __name__ == "__main__":
+    main()
