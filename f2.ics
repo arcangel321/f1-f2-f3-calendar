@@ -293,32 +293,6 @@ END:VEVENT
 BEGIN:VEVENT
 LAST-MODIFIED:20260912T083510Z
 DTSTAMP:20260912T083510Z
-LOCATION:Azerbaijan
-X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
-DTSTART;VALUE=DATE:20260926
-DTEND;VALUE=DATE:20260927
-SUMMARY:F2 Feature Race
-TRANSP:TRANSPARENT
-SEQUENCE:0
-UID:6a51085a54aa884cca7b1cb5
-PRIORITY:5
-X-MICROSOFT-CDO-IMPORTANCE:1
-CLASS:PUBLIC
-DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdps/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdpt/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdpv/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdpz/3LpVh\n\n
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-END:VALARM
-BEGIN:VALARM
-TRIGGER:-PT5M
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-LAST-MODIFIED:20260912T083510Z
-DTSTAMP:20260912T083510Z
 LOCATION:Italy
 X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 DTSTART:20260904T080000Z
@@ -541,6 +515,33 @@ CLASS:PUBLIC
 DESCRIPTION:Stay up to speed with the latest information from Formula 2.\n\nNew season schedule releases\, updates and any changes to race dates\, times and details will be made automatically – you don’t have to do anything.\n\nManage your ECAL at https://support.ecal.com\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2sgnHx/3LpVh\n\n
 BEGIN:VALARM
 TRIGGER:-PT1M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
+LOCATION:Azerbaijan
+X-ECAL-SCHEDULE:
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:F2 Feature Race
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:6a51085a54aa884cca7b1cb5
+PRIORITY:5
+X-MICROSOFT-CDO-IMPORTANCE:1
+CLASS:PUBLIC
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdps/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdpt/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdpv/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdpz/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
+BEGIN:VALARM
+TRIGGER:-PT5M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT30M
 ACTION:DISPLAY
 DESCRIPTION:Reminder
 END:VALARM
