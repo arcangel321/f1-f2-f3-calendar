@@ -241,32 +241,6 @@ END:VEVENT
 BEGIN:VEVENT
 LAST-MODIFIED:20260912T083510Z
 DTSTAMP:20260912T083510Z
-LOCATION:Azerbaijan
-X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:F2 Feature Race
-TRANSP:TRANSPARENT
-SEQUENCE:0
-UID:6a51085a54aa884cca7b1cb4
-PRIORITY:5
-X-MICROSOFT-CDO-IMPORTANCE:1
-CLASS:PUBLIC
-DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdpl/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdpm/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdpn/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdpr/3LpVh\n\n
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-END:VALARM
-BEGIN:VALARM
-TRIGGER:-PT5M
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-LAST-MODIFIED:20260912T083510Z
-DTSTAMP:20260912T083510Z
 LOCATION:Italy
 X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 DTSTART:20260904T080000Z
@@ -498,24 +472,24 @@ LAST-MODIFIED:00010101T000000Z
 DTSTAMP:00010101T000000Z
 LOCATION:Azerbaijan
 X-ECAL-SCHEDULE:
-DTSTART;VALUE=DATE:20260926
-DTEND;VALUE=DATE:20260927
-SUMMARY:F2 Feature Race
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:F2 Practice
 TRANSP:TRANSPARENT
 SEQUENCE:0
-UID:6a51085a54aa884cca7b1cb5
+UID:6a51085a54aa884cca7b1cb2
 PRIORITY:5
 X-MICROSOFT-CDO-IMPORTANCE:1
 CLASS:PUBLIC
-DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdps/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdpt/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdpv/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdpz/3LpVh\n\n
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdp6/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdp7/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdp8/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdpc/3LpVh\n\n
 X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 BEGIN:VALARM
-TRIGGER:-PT5M
+TRIGGER:-PT30M
 ACTION:DISPLAY
 DESCRIPTION:Reminder
 END:VALARM
 BEGIN:VALARM
-TRIGGER:-PT30M
+TRIGGER:-PT5M
 ACTION:DISPLAY
 DESCRIPTION:Reminder
 END:VALARM
@@ -525,16 +499,97 @@ LAST-MODIFIED:00010101T000000Z
 DTSTAMP:00010101T000000Z
 LOCATION:Azerbaijan
 X-ECAL-SCHEDULE:
-DTSTART:20260924T060000Z
-DTEND:20260924T064500Z
-SUMMARY:F2 Practice
+DTSTART:20260925T041500Z
+DTEND:20260925T050500Z
+SUMMARY:F2 Feature Race
 TRANSP:TRANSPARENT
 SEQUENCE:0
-UID:6a51085a54aa884cca7b1cb2
+UID:6a51085a54aa884cca7b1cb4
 PRIORITY:5
 X-MICROSOFT-CDO-IMPORTANCE:1
 CLASS:PUBLIC
-DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdp6/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdp7/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdp8/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdpc/3LpVh\n\n
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdpl/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdpm/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdpn/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdpr/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT5M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
+LOCATION:Azerbaijan
+X-ECAL-SCHEDULE:
+DTSTART:20260925T101500Z
+DTEND:20260926T112000Z
+SUMMARY:F2 Feature Race
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:6a51085a54aa884cca7b1cb5
+PRIORITY:5
+X-MICROSOFT-CDO-IMPORTANCE:1
+CLASS:PUBLIC
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdps/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdpt/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdpv/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdpz/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT5M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
+LOCATION:Azerbaijan
+X-ECAL-SCHEDULE:
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:F2 Kwalificatie
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:6aaaad6154aa884dbf24ac17
+PRIORITY:5
+X-MICROSOFT-CDO-IMPORTANCE:1
+CLASS:PUBLIC
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2slbk9/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2slbkb/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2slbkc/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2slbkg/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT5M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
+LOCATION:Azerbaijan
+X-ECAL-SCHEDULE:
+DTSTART:20260926T070000Z
+DTEND:20260926T080500Z
+SUMMARY:F2 Feature Race
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:6aaaad6154aa884dbf24ac18
+PRIORITY:5
+X-MICROSOFT-CDO-IMPORTANCE:1
+CLASS:PUBLIC
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2slbkh/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2slbkj/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2slbkk/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2slbkn/3LpVh\n\n
 X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 BEGIN:VALARM
 TRIGGER:-PT30M
