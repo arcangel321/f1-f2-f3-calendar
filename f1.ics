@@ -581,32 +581,6 @@ LAST-MODIFIED:20261027T144828Z
 DTSTAMP:20261027T144828Z
 LOCATION:Brazil
 X-ECAL-SCHEDULE:63ed7a8c4c410f091423b8a6
-DTSTART:20261107T180000Z
-DTEND:20261107T190000Z
-SUMMARY:F1 Kwalificatie
-TRANSP:TRANSPARENT
-SEQUENCE:0
-UID:691e9a9d54aa88334d653b24
-PRIORITY:5
-X-MICROSOFT-CDO-IMPORTANCE:1
-CLASS:PUBLIC
-DESCRIPTION:Follow all the action on F1 TV and F1.com. \n\nUnlock the inside world of F1 by signing up to F1 Unlocked at F1.com/F1Unlocked\n\nFollow on the go with F1 TV\nhttps://cal.f1.com/f/28T1Qj/3LpVr\n\nVisit the Race Hub\nhttps://cal.f1.com/f/28T1Qw/3LpVr\n\nFree sign up to F1 Unlocked\nhttps://cal.f1.com/f/28T1QN/3LpVr\n\nDownload the Official F1 Race Programme App\nhttps://cal.f1.com/f/28T1R4/3LpVr\n\nWear your favourite teams colours with F1 store\nhttps://cal.f1.com/f/28T1Rk/3LpVr\n\nChoose where to watch a race with F1 Tickets\nhttps://cal.f1.com/f/28T1RD/3LpVr\n\nFollow us on Facebook\nhttps://cal.f1.com/f/28T1RX/3LpVr\n\nFollow us on X\nhttps://cal.f1.com/f/28T1Sh/3LpVr\n\nFollow us on Instagram\nhttps://cal.f1.com/f/28T1SD/3LpVr\n\nFollow us on TikTok\nhttps://cal.f1.com/f/28T1ST/3LpVr\n\nManage my ECAL\nhttps://cal.f1.com/f/28T1TF/3LpVr\n\n
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-END:VALARM
-BEGIN:VALARM
-TRIGGER:-PT5M
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-LAST-MODIFIED:20261027T144828Z
-DTSTAMP:20261027T144828Z
-LOCATION:Brazil
-X-ECAL-SCHEDULE:63ed7a8c4c410f091423b8a6
 DTSTART:20261108T170000Z
 DTEND:20261108T190000Z
 SUMMARY:F1 Race
@@ -3997,6 +3971,33 @@ PRIORITY:5
 X-MICROSOFT-CDO-IMPORTANCE:1
 CLASS:PUBLIC
 DESCRIPTION:Follow all the action on F1 TV and F1.com. \n\nUnlock the inside world of F1 by signing up to F1 Unlocked at F1.com/F1Unlocked\n\nFollow on the go with F1 TV\nhttps://cal.f1.com/f/28T1vk/3LpVr\n\nVisit the Race Hub\nhttps://cal.f1.com/f/28T1vF/3LpVr\n\nFree sign up to F1 Unlocked\nhttps://cal.f1.com/f/28T1vW/3LpVr\n\nDownload the Official F1 Race Programme App\nhttps://cal.f1.com/f/28T1wh/3LpVr\n\nWear your favourite teams colours with F1 store\nhttps://cal.f1.com/f/28T1wB/3LpVr\n\nChoose where to watch a race with F1 Tickets\nhttps://cal.f1.com/f/28T1wS/3LpVr\n\nFollow us on Facebook\nhttps://cal.f1.com/f/28T1xh/3LpVr\n\nFollow us on X\nhttps://cal.f1.com/f/28T1xD/3LpVr\n\nFollow us on Instagram\nhttps://cal.f1.com/f/28T1xT/3LpVr\n\nFollow us on TikTok\nhttps://cal.f1.com/f/28T1yk/3LpVr\n\nManage my ECAL\nhttps://cal.f1.com/f/28T1zk/3LpVr\n\n
+X-ECAL-SCHEDULE:63ed7a8c4c410f091423b8a6
+BEGIN:VALARM
+TRIGGER:-PT5M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
+LOCATION:Brazil
+X-ECAL-SCHEDULE:
+DTSTART:20261107T180000Z
+DTEND:20261107T203000Z
+SUMMARY:F1 Kwalificatie
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:691e9a9d54aa88334d653b24
+PRIORITY:5
+X-MICROSOFT-CDO-IMPORTANCE:1
+CLASS:PUBLIC
+DESCRIPTION:Follow all the action on F1 TV and F1.com. \n\nUnlock the inside world of F1 by signing up to F1 Unlocked at F1.com/F1Unlocked\n\nFollow on the go with F1 TV\nhttps://cal.f1.com/f/28T1Qj/3LpVr\n\nVisit the Race Hub\nhttps://cal.f1.com/f/28T1Qw/3LpVr\n\nFree sign up to F1 Unlocked\nhttps://cal.f1.com/f/28T1QN/3LpVr\n\nDownload the Official F1 Race Programme App\nhttps://cal.f1.com/f/28T1R4/3LpVr\n\nWear your favourite teams colours with F1 store\nhttps://cal.f1.com/f/28T1Rk/3LpVr\n\nChoose where to watch a race with F1 Tickets\nhttps://cal.f1.com/f/28T1RD/3LpVr\n\nFollow us on Facebook\nhttps://cal.f1.com/f/28T1RX/3LpVr\n\nFollow us on X\nhttps://cal.f1.com/f/28T1Sh/3LpVr\n\nFollow us on Instagram\nhttps://cal.f1.com/f/28T1SD/3LpVr\n\nFollow us on TikTok\nhttps://cal.f1.com/f/28T1ST/3LpVr\n\nManage my ECAL\nhttps://cal.f1.com/f/28T1TF/3LpVr\n\n
 X-ECAL-SCHEDULE:63ed7a8c4c410f091423b8a6
 BEGIN:VALARM
 TRIGGER:-PT5M
