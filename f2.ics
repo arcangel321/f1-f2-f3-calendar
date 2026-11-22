@@ -5,12 +5,12 @@ METHOD:PUBLISH
 X-WR-CALNAME:Formula 2
 X-Built-On-Cache-Miss:true
 BEGIN:VEVENT
-LAST-MODIFIED:20261121T104053Z
-DTSTAMP:20261121T104053Z
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
 LOCATION:Qatar
-X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
-DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261128
+X-ECAL-SCHEDULE:
+DTSTART:20261127T110000Z
+DTEND:20261127T114500Z
 SUMMARY:F2 Practice
 TRANSP:TRANSPARENT
 SEQUENCE:0
@@ -18,7 +18,8 @@ UID:6a51085a54aa884dc435b491
 PRIORITY:5
 X-MICROSOFT-CDO-IMPORTANCE:1
 CLASS:PUBLIC
-DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdnw/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdnx/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdny/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdnC/3LpVh\n\n
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdnw/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdnx/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdny/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdnC/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
@@ -31,12 +32,12 @@ DESCRIPTION:Reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-LAST-MODIFIED:20261121T104053Z
-DTSTAMP:20261121T104053Z
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
 LOCATION:Qatar
-X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
-DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261128
+X-ECAL-SCHEDULE:
+DTSTART:20261127T150000Z
+DTEND:20261127T153000Z
 SUMMARY:F2 Kwalificatie
 TRANSP:TRANSPARENT
 SEQUENCE:0
@@ -44,7 +45,8 @@ UID:6a51085a54aa884dc435b492
 PRIORITY:5
 X-MICROSOFT-CDO-IMPORTANCE:1
 CLASS:PUBLIC
-DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdnD/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdnF/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdnH/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdnN/3LpVh\n\n
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdnD/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdnF/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdnH/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdnN/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
@@ -57,12 +59,12 @@ DESCRIPTION:Reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-LAST-MODIFIED:20261121T104053Z
-DTSTAMP:20261121T104053Z
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
 LOCATION:Qatar
-X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
+X-ECAL-SCHEDULE:
+DTSTART:20261128T161500Z
+DTEND:20261128T170500Z
 SUMMARY:F2 Feature Race
 TRANSP:TRANSPARENT
 SEQUENCE:0
@@ -70,7 +72,8 @@ UID:6a51085a54aa884dc435b493
 PRIORITY:5
 X-MICROSOFT-CDO-IMPORTANCE:1
 CLASS:PUBLIC
-DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdnP/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdnQ/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdnR/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdnV/3LpVh\n\n
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdnP/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdnQ/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdnR/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdnV/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
@@ -83,12 +86,12 @@ DESCRIPTION:Reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-LAST-MODIFIED:20261121T104053Z
-DTSTAMP:20261121T104053Z
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
 LOCATION:Qatar
-X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
-DTSTART;VALUE=DATE:20261129
-DTEND;VALUE=DATE:20261130
+X-ECAL-SCHEDULE:
+DTSTART:20261129T120000Z
+DTEND:20261129T130500Z
 SUMMARY:F2 Feature Race
 TRANSP:TRANSPARENT
 SEQUENCE:0
@@ -96,7 +99,8 @@ UID:6a51085a54aa884dc435b494
 PRIORITY:5
 X-MICROSOFT-CDO-IMPORTANCE:1
 CLASS:PUBLIC
-DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdnW/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdnX/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdnY/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdp2/3LpVh\n\n
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2jcdnW/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2jcdnX/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2jcdnY/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2jcdp2/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
@@ -109,36 +113,10 @@ DESCRIPTION:Reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-LAST-MODIFIED:20261121T104053Z
-DTSTAMP:20261121T104053Z
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
 LOCATION:United Arab Emirates
-X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
-DTSTART;VALUE=DATE:20261204
-DTEND;VALUE=DATE:20261205
-SUMMARY:F2 Practice
-TRANSP:TRANSPARENT
-SEQUENCE:0
-UID:6a47cce354aa884cc83c4448
-PRIORITY:5
-X-MICROSOFT-CDO-IMPORTANCE:1
-CLASS:PUBLIC
-DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2hYcMx/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2hYcMy/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2hYcMz/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2hYcMD/3LpVh\n\n
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-END:VALARM
-BEGIN:VALARM
-TRIGGER:-PT5M
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-LAST-MODIFIED:20261121T104053Z
-DTSTAMP:20261121T104053Z
-LOCATION:United Arab Emirates
-X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
+X-ECAL-SCHEDULE:
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:F2 Kwalificatie
@@ -149,6 +127,7 @@ PRIORITY:5
 X-MICROSOFT-CDO-IMPORTANCE:1
 CLASS:PUBLIC
 DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2j5jk9/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2j5jkb/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2j5jkc/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2j5jkg/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
@@ -161,10 +140,37 @@ DESCRIPTION:Reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-LAST-MODIFIED:20261121T104053Z
-DTSTAMP:20261121T104053Z
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
 LOCATION:United Arab Emirates
+X-ECAL-SCHEDULE:
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:F2 Practice
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:6a47cce354aa884cc83c4448
+PRIORITY:5
+X-MICROSOFT-CDO-IMPORTANCE:1
+CLASS:PUBLIC
+DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2hYcMx/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2hYcMy/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2hYcMz/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2hYcMD/3LpVh\n\n
 X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT5M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
+LOCATION:United Arab Emirates
+X-ECAL-SCHEDULE:
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:F2 Feature Race
@@ -175,6 +181,7 @@ PRIORITY:5
 X-MICROSOFT-CDO-IMPORTANCE:1
 CLASS:PUBLIC
 DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2j5jkh/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2j5jkj/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2j5jkk/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2j5jkn/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
@@ -187,10 +194,10 @@ DESCRIPTION:Reminder
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-LAST-MODIFIED:20261121T104053Z
-DTSTAMP:20261121T104053Z
+LAST-MODIFIED:00010101T000000Z
+DTSTAMP:00010101T000000Z
 LOCATION:United Arab Emirates
-X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
+X-ECAL-SCHEDULE:
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:F2 Feature Race
@@ -201,6 +208,7 @@ PRIORITY:5
 X-MICROSOFT-CDO-IMPORTANCE:1
 CLASS:PUBLIC
 DESCRIPTION:Follow all the action on F1 TV and fiaformula2.com \n\nThe date and time of this event are to be confirmed.\n\nFollow on the go with F1 TV\nhttps://cal.f2fia.com/f/2j5jkp/3LpVh\n\nVisit the Race Hub\nhttps://cal.f2fia.com/f/2j5jkq/3LpVh\n\nFree sign up to F1 Unlocked\nhttps://cal.f2fia.com/f/2j5jkr/3LpVh\n\nManage my ECAL\nhttps://cal.f2fia.com/f/2j5jkv/3LpVh\n\n
+X-ECAL-SCHEDULE:642bc08b75bca3000d6b659a
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
